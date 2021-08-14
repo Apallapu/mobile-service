@@ -1,0 +1,12 @@
+--
+--CREATE TABLE document_details (
+--	doc_id bigserial NOT NULL,
+--	document_name varchar(255) NULL,
+--	document_type varchar(255) NULL,
+--	customer_id bigserial NOT NULL,
+--	date timestamp NULL,
+--	CONSTRAINT pk_document_details PRIMARY KEY (doc_id)
+--);
+--
+--ALTER TABLE document_details
+--  ADD CONSTRAINT fk_document_details FOREIGN KEY (customer_id) REFERENCES customer_details;

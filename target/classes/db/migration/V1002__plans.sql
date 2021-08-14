@@ -1,0 +1,13 @@
+--
+--
+--CREATE TABLE plan_details (
+--	plan_id bigserial NOT NULL,
+--	plan_name varchar(255) NULL,
+--	type varchar(255) NULL,
+--	customer_id bigserial NOT NULL,
+--	date timestamp NULL,
+--	CONSTRAINT pk_plan_details PRIMARY KEY (plan_id)
+--);
+--
+--ALTER TABLE plan_details
+--  ADD CONSTRAINT fk_plan_details FOREIGN KEY (customer_id) REFERENCES customer_details;

@@ -1,0 +1,12 @@
+--
+--CREATE TABLE customer_details (
+--	customer_id bigserial NOT NULL,
+--	customer_name varchar(255) NULL,
+--	email_id varchar(255) NULL,
+--	customer_reference_id varchar(255) NULL,
+--	phone_number varchar(255) NULL,
+--	phone_type varchar(255) NULL,
+--	status varchar(255) NULL,
+--	date timestamp NULL,
+--	CONSTRAINT customer_details_pkey PRIMARY KEY (customer_id)
+--);
