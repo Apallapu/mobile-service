@@ -24,6 +24,13 @@ public class GobalExceptionHandler {
         return new ErrorResponse(e.getErrorCode(), e.getErrorMessage());
 
     }
+    @ExceptionHandler(CustomerException.class)
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+    @ResponseBody
+    public ErrorResponse handle400Error(CustomerException e) {
+        return new ErrorResponse(e.getErrorCode(), e.getErrorMessage());
+
+    }
 
     /**
      * Handle 500 error error response.

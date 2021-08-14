@@ -4,9 +4,11 @@ import com.hackthon.entity.CustomerDetailEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface CustomerRepository extends JpaRepository<CustomerDetailEntity,Long> {
 
     CustomerDetailEntity findByCustomerReferenceId(String customerReferenceId);
-    CustomerDetailEntity findByStatus(String status);
+    List<CustomerDetailEntity> findByStatus(String status);
 }

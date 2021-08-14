@@ -20,6 +20,10 @@ public class CustomerDTO {
             example = "test@gmail.com", required = false)
     private String email;
 
+    @Schema(description = "status",
+            example = "status", required = false)
+    private String status;
+
     @Schema(description = "ContactDTO")
     private ContactDTO contactDTO;
 
@@ -28,11 +32,5 @@ public class CustomerDTO {
 
     @Schema(description = "documentsDTO")
     private DocumentsDTO documentsDTO;
-
-
-
-
-
-
 
 }

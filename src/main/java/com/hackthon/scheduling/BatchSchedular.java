@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class BatchSchedular {
 
@@ -17,11 +19,15 @@ public class BatchSchedular {
     /**
      *
      */
-    @Scheduled(cron = "*/5 * * * * ?")
+    @Scheduled(cron = "*/2 * * * * ?")
     public void updateCustomerStatus() {
-        CustomerDetailEntity detailEntity=customerRepository.findByStatus(CusomerConstant.APPROVE);
-        detailEntity.setStatus(CusomerConstant.ACTIVE);
-        detailEntity.setIsConnection(true);
-        customerRepository.save(detailEntity);
+        List<CustomerDetailEntity> detailEntity=customerRepository.findByStatus(CusomerConstant.APPROVE);
+
+        detailEntity.forEach(customerDetail->{
+            customerDetail.setStatus(CusomerConstant.ACTIVE);
+            customerDetail.setIsConnection(true);
+            customerRepository.save(customerDetail);
+        });
+
     }
 }
